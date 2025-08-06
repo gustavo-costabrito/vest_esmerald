@@ -5,7 +5,7 @@
     <?php require_once(__DIR__ . '/includes/header.php')?>
 
     <main>
-
+        <?php require_once(__DIR__ . '/components/inicio/banner.php')?>
     </main>
 
     <?php require_once(__DIR__ . '/includes/footer.php')?>

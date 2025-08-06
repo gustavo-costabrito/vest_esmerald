@@ -1,0 +1,193 @@
+:root {
+    /* Cores */
+    --cor-principal: #eaeaea;
+    --cor-secundario: #4B0082;
+    --cor-terciario: #D3D3D3;
+    --cor-auxiliar: #8A2BE2;
+}
+
+html {
+    font-size: 100%;
+
+    body {
+        .center {
+            display: grid;
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        h3,
+        h4,
+        h5,
+        p,
+        li,
+        span,
+        button,
+        input {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        a {
+            font-family: "Libertinus Serif", serif;
+            font-weight: 600;
+            font-style: normal;
+            text-decoration: none;
+        }
+    }
+}
+
+
+/* Header */
+header {
+    display: grid;
+    grid-template-rows: 30% 70%;
+    max-height: 180px;
+    height: 100%;
+
+    .header-primary {
+        background-color: var(--cor-secundario);
+
+        .center {
+            justify-content: end;
+            align-content: center;
+
+            ul {
+                display: flex;
+                gap: 3rem;
+
+                li {
+                    color: var(--cor-principal);
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .header-secundary {
+        background-color: var(--cor-principal);
+
+        .center {
+            grid-template-columns: 15% 40% 30%;
+            justify-content: space-between;
+
+            .header-secundary__logo {
+                display: grid;
+                justify-content: start;
+                align-content: center;
+                overflow: hidden;
+
+                img {
+                    width: 9rem;
+                }
+            }
+
+            nav {
+                display: grid;
+                align-content: center;
+
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+
+                    a {
+                        color: var(--cor-secundario);
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+
+            .header-secundary__buy{
+                display: grid;
+                grid-template-columns: 65% 35%;
+                grid-template-rows: 40%;
+                align-content: center;
+                justify-content: space-between;
+
+                .search{
+                    display: grid;
+                    grid-template-columns: 80% 20%;
+
+                    input{
+                        height: 100%;
+                        padding-left: 1rem;
+                        border-radius: 10px 0 0 10px;
+                        border: none;
+                        outline: solid 2px var(--cor-terciario);
+                        font-size: 1rem;
+                    }
+
+                    .search__lupa{
+                        background-color: var(--cor-secundario);
+                        display: grid;
+                        justify-content: center;
+                        align-content: center;
+                        border-radius: 0 10px 10px 0;
+                        outline: solid 2px var(--cor-secundario);
+                        cursor: pointer;
+
+                        img{
+                            width: 2rem;
+                        }
+                    }
+                }
+
+                .buy{
+                    display: grid;
+                    grid-template-rows: 100%;
+                    align-content: center;
+
+                    ul{
+                        display: flex;
+                        justify-content: end;
+                        align-items: center;
+                        gap: 1rem;
+
+                        li{
+                            cursor: pointer;
+
+                            span{
+                                background-color: var(--cor-secundario);
+                                color: var(--cor-principal);
+                                position: absolute;
+                                display: grid;
+                                justify-items: center;
+                                align-items: center;
+                                height: 1.6rem;
+                                width: 1.6rem;
+                                margin-left: 1.4rem;
+                                border-radius: 50%;
+
+                            }
+
+                            img{
+                                width: 2.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Inicio */
+.banner-home{
+    background-color: var(--cor-principal);
+    max-height: 720px;
+    height: 100vh;
+
+    .banner-home__fundo{
+        width: 100px;
+        z-index: 10;
+    }
+}

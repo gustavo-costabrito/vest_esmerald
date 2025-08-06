@@ -26,3 +26,7 @@ function env(){
         $_ENV[$env[0]] = $env[1];
     }
 }
+
+if(session_status() === PHP_SESSION_NONE){
+    session_start();
+}
