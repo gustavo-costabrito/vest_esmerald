@@ -1,6 +1,6 @@
 :root {
     /* Cores */
-    --cor-principal: #eaeaea;
+    --cor-principal: #ffffff;
     --cor-secundario: #4B0082;
     --cor-terciario: #D3D3D3;
     --cor-auxiliar: #8A2BE2;
@@ -15,7 +15,7 @@ html {
             max-width: 1400px;
             width: 100%;
             margin: 0 auto;
-            height: 100%;
+            height: 100% !important;
         }
 
         h3,
@@ -131,7 +131,7 @@ header {
                         justify-content: center;
                         align-content: center;
                         border-radius: 0 10px 10px 0;
-                        outline: solid 2px var(--cor-secundario);
+                        outline: none;
                         cursor: pointer;
 
                         img{
@@ -182,12 +182,31 @@ header {
 
 /* Inicio */
 .banner-home{
-    background-color: var(--cor-principal);
-    max-height: 720px;
+    max-height: 725px;
     height: 100vh;
+    overflow: hidden;
+}
 
-    .banner-home__fundo{
-        width: 100px;
-        z-index: 10;
+.productHome{
+    min-height: 1000px;
+
+    .center{
+        grid-template-rows: 10% 90%;
+        min-height: 1000px;
+        
+        .productHome__content{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 30%));
+            justify-content: space-between;
+            align-content: center;
+            row-gap: 2rem;
+
+            >div{
+                background-color: var(--cor-principal);
+                height: 400px;
+                box-shadow: 0 0 10px var(--cor-terciario);
+            }
+        }
     }
 }
+

@@ -6,6 +6,8 @@
 
     <main>
         <?php require_once(__DIR__ . '/components/inicio/banner.php')?>
+
+        <?php require_once(__DIR__ . '/components/inicio/produtosHome.php')?>
     </main>
 
     <?php require_once(__DIR__ . '/includes/footer.php')?>
